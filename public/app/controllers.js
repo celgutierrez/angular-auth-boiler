@@ -1,4 +1,4 @@
-angular.module('ControllerName', [])
+angular.module('ControllerName', ['services'])
     .controller('SignupCtrl', ['$scope', '$http', '$location', function($scope, $http, $location) {
         $scope.user = {
             email: '',

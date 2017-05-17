@@ -1,15 +1,17 @@
-angular.module('app', [])
-
-.factory('Auth', ['$window', function($window) {
+angular.module('AppServices', ['ngResource'])
+    .factory('NameOfResource', ['$resource', function($resource) {
+        //return $resource();
+    }])
+    .factory('Auth', ['$window', function($window) {
         return {
             saveToken: function(token) {
-                $window.localStorage['token-name'] = token;
+                $window.localStorage['secrettoken-name'] = token;
             },
             getToken: function() {
-                return $window.localStorage['token-name'];
+                return $window.localStorage['secrettoken-name'];
             },
             removeToken: function() {
-                $window.localStorage.removeItem('token-name');
+                $window.localStorage.removeItem('secrettoken-name');
             },
             isLoggedIn: function() {
                 var token = this.getToken();

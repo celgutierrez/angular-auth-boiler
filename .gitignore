@@ -1,0 +1,7 @@
+.env
+node_modules
+*.log
+jspm_packages
+.DS_Store
+.AppleDouble
+.LSOverride
